@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Услуги — DigitalHub{% endblock %}
+
+{% block content %}
+  <!-- ===== HEADER ===== -->
+  {% include 'header.html' %}
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Услуги</h1>
+        <p class="breadcrumbs"><a href="index.html">Главная</a> / Услуги</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Каталог</span>
+          <h2 class="section__title">Наши услуги и цены</h2>
+          <p class="section__text">Выберите подходящую услугу или свяжитесь с нами для индивидуального расчёта.</p>
+        </div>
+        
+        <div class="services">
+          {% for service in services %}
+            <article class="service-card reveal">
+              {% if service.image %}
+                <img src="{{ service.image.url }}" alt="{{ service.title }}" class="service-card__img">
+              {% endif %}
+              <div class="service-card__body">
+                <h3 class="service-card__title">{{ service.title }}</h3>
+                <p class="service-card__text">{{ service.description }}</p>
+                <div class="service-card__footer">
+                  <span class="service-card__price"><small>от</small> {{ service.price }} ₸</span>
+                  <a href="contacts.html" class="btn btn-outline">Заказать</a>
+                </div>
+              </div>
+            </article>
+          {% empty %}
+            <p>Услуги скоро появятся.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2 class="cta__title">Готовы начать проект?</h2>
+          <p class="cta__text">Расскажите о задаче — мы предложим решение и рассчитаем стоимость бесплатно.</p>
+          <a href="contacts.html" class="btn">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  {% include 'footer.html' %}
+{% endblock %}

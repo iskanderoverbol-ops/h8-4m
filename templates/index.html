@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная — DigitalHub</title>
+  <link rel="icon" href="{% static 'img/logo.svg' %}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="{% static 'img/logo.svg' %}" alt="DigitalHub">
+        <span>DigitalHub</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="about.html" class="nav__link">О проекте</a></li>
+          <li><a href="services.html" class="nav__link">Услуги</a></li>
+          <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+        </ul>
+        <a href="contacts.html" class="btn btn-primary">Связаться</a>
+      </nav>
+      <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <!-- ===== /HEADER ===== -->
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="reveal">
+          <span class="section__tag">Digital-агентство</span>
+          <h1 class="hero__title">Цифровые решения для <span class="gradient-text">вашего бизнеса</span></h1>
+          <p class="hero__text">DigitalHub — команда разработчиков, дизайнеров и маркетологов. Мы превращаем идеи в работающие продукты.</p>
+          <div class="hero__buttons">
+            <a href="services.html" class="btn btn-primary">Наши услуги</a>
+            <a href="about.html" class="btn btn-outline">О проекте</a>
+          </div>
+        </div>
+        <img src="{% static 'img/hero.svg' %}" alt="DigitalHub" class="hero__img">
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal"><div class="stat__num gradient-text" data-count="120" data-suffix="+">0</div><div class="stat__label">Проектов</div></div>
+          <div class="stat reveal"><div class="stat__num gradient-text" data-count="85" data-suffix="+">0</div><div class="stat__label">Клиентов</div></div>
+          <div class="stat reveal"><div class="stat__num gradient-text" data-count="7">0</div><div class="stat__label">Лет на рынке</div></div>
+          <div class="stat reveal"><div class="stat__num gradient-text" data-count="25">0</div><div class="stat__label">Специалистов</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Услуги</span>
+          <h2 class="section__title">Что мы делаем</h2>
+          <p class="section__text">Полный цикл digital-услуг: от идеи до запуска и продвижения.</p>
+        </div>
+        <div class="services">
+          <article class="service-card reveal">
+            <img src="{% static 'img/service1.svg' %}" alt="Веб-разработка" class="service-card__img">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Веб-разработка</h3>
+              <p class="service-card__text">Лендинги, корпоративные сайты и интернет-магазины на современных технологиях с адаптивной вёрсткой.</p>
+              <div class="service-card__footer">
+                <span class="service-card__price"><small>от</small> 150 000 ₸</span>
+                <a href="contacts.html" class="btn btn-outline">Заказать</a>
+              </div>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="{% static 'img/service2.svg' %}" alt="Мобильные приложения" class="service-card__img">
+            <div class="service-card__body">
+              <h3 class="service-card__title">Мобильные приложения</h3>
+              <p class="service-card__text">Разработка приложений для iOS и Android: от прототипа и дизайна до публикации в магазинах.</p>
+              <div class="service-card__footer">
+                <span class="service-card__price"><small>от</small> 400 000 ₸</span>
+                <a href="contacts.html" class="btn btn-outline">Заказать</a>
+              </div>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="{% static 'img/service3.svg' %}" alt="SEO и продвижение" class="service-card__img">
+            <div class="service-card__body">
+              <h3 class="service-card__title">SEO и продвижение</h3>
+              <p class="service-card__text">Выводим сайт в топ поисковых систем, настраиваем рекламу и аналитику для роста продаж.</p>
+              <div class="service-card__footer">
+                <span class="service-card__price"><small>от</small> 90 000 ₸</span>
+                <a href="contacts.html" class="btn btn-outline">Заказать</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="section__more">
+          <a href="services.html" class="btn btn-primary">Все услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Преимущества</span>
+          <h2 class="section__title">Почему выбирают нас</h2>
+        </div>
+        <div class="features">
+          <div class="feature reveal"><div class="feature__icon">⚡</div><h3 class="feature__title">Быстро</h3><p class="feature__text">Чёткие сроки и поэтапная сдача проекта.</p></div>
+          <div class="feature reveal"><div class="feature__icon">🎯</div><h3 class="feature__title">Под ваши цели</h3><p class="feature__text">Решения строим вокруг задач бизнеса.</p></div>
+          <div class="feature reveal"><div class="feature__icon">🛡</div><h3 class="feature__title">Надёжно</h3><p class="feature__text">Гарантия и поддержка после запуска.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2 class="cta__title">Готовы начать проект?</h2>
+          <p class="cta__text">Расскажите о задаче — мы предложим решение и рассчитаем стоимость бесплатно.</p>
+          <a href="contacts.html" class="btn">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (вынести в footer.html) ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo">
+            <img src="{% static 'img/logo.svg' %}" alt="DigitalHub">
+            <span>DigitalHub</span>
+          </a>
+          <p class="footer__desc">Создаём сайты, мобильные приложения и digital-стратегии, которые помогают бизнесу расти.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Навигация</h4>
+          <ul class="footer__list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О проекте</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Контакты</h4>
+          <ul class="footer__list">
+            <li><a href="tel:+77001234567">+7 (700) 123-45-67</a></li>
+            <li><a href="mailto:info@digitalhub.kz">info@digitalhub.kz</a></li>
+            <li>г. Алматы, пр. Абая, 150</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Мы в соцсетях</h4>
+          <div class="socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+            <a href="https://wa.me/77001234567" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 DigitalHub. Все права защищены.</span>
+        <span>Сделано с ❤ в Казахстане</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== /FOOTER ===== -->
+
+  <button class="to-top" aria-label="Наверх">↑</button>
+  <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
